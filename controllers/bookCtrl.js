@@ -3,8 +3,8 @@ const Book = require('../models/book')
 function insertBook (req, res) {
   var book = new Book({
     name: req.body.name,
-    author: req.body.last_name,
-    edition: req.body.age,
+    author: req.body.author,
+    edition: req.body.edition,
     publishing: req.body.publishing,
     editorial: req.body.editorial,
     dateBorrowed: req.body.dateBorrowed,
@@ -48,8 +48,8 @@ function update (req, res) {
       res.send(err)
     } else {
       book.name = req.params.name
-      book.author = req.body.last_name
-      book.edition = req.body.age
+      book.author = req.body.author
+      book.edition = req.body.edition
       book.publishing = req.body.publishing
       book.editorial = req.body.editorial
       book.dateBorrowed = req.body.dateBorrowed
