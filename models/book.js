@@ -15,8 +15,7 @@ var bookSchema = new Schema({
       type: String,
       required: true
     },
-    nickName: String,
-    required: true
+    nickName: String
   },
   edition: {
     type: Number,
